@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AdminExpress | Login</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="login">
+    <aside class="brand">
+      <p>AdminExpress</p>
+    </aside>
+
+    <section class="login-panel" aria-labelledby="login-title">
+      <div class="login-content">
+        <h1 id="login-title">
+          Let’s <strong>Sign In</strong> 👇
+        </h1>
+
+        <p class="description">
+          Hey, Enter your details to get sign in<br>
+          to your account.
+        </p>
+
+        <form class="login-form">
+          <div class="field">
+            <label for="email">Email</label>
+
+            <div class="input-container">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <rect x="3" y="5" width="18" height="14" rx="2"/>
+                <path d="m3 7 9 6 9-6"/>
+              </svg>
+
+              <input
+                type="email"
+                id="email"
+                placeholder="Enter Email"
+                autocomplete="username"
+                required
+              >
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="password">Password</label>
+
+            <div class="input-container">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <rect x="5" y="10" width="14" height="11" rx="2"/>
+                <path d="M8 10V7a4 4 0 0 1 8 0v3"/>
+                <path d="M12 14v3"/>
+              </svg>
+
+              <input
+                type="password"
+                id="password"
+                placeholder="Enter Password"
+                autocomplete="current-password"
+                required
+              >
+            </div>
+          </div>
+
+          <a class="forgot-password" href="#demo">
+            Forgot password?
+          </a>
+
+          <!-- Botón visual: la actividad no incluye autenticación. -->
+          <button type="button">Sign In</button>
+        </form>
+
+        <p class="signup">
+          Don’t have an account? <a href="#demo">Sign Up</a>
+        </p>
+
+        <p class="demo" id="demo">
+          Demo only. Account services are not available.
+        </p>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

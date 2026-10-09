@@ -1,0 +1,263 @@
+/* Estilos generales */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #34364f;
+  background-color: #f7f7f7;
+}
+
+/* Escritorio: dos columnas con CSS Grid */
+.login {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 100vh;
+  min-height: 100svh;
+}
+
+.brand {
+  display: grid;
+  place-items: center;
+  padding: 32px;
+  background-color: #075bdb;
+  color: white;
+}
+
+.brand p {
+  margin: 0;
+  font-size: clamp(30px, 3.5vw, 48px);
+  font-weight: bold;
+}
+
+.login-panel {
+  display: grid;
+  place-items: center;
+  min-width: 0;
+  padding: 48px;
+}
+
+.login-content {
+  width: 100%;
+  max-width: 360px;
+}
+
+h1 {
+  margin: 0 0 20px;
+  font-size: 24px;
+  font-weight: normal;
+}
+
+.description {
+  margin: 0 0 48px;
+  color: #777b8c;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+/* Formulario organizado con Grid */
+.login-form {
+  display: grid;
+  gap: 16px;
+}
+
+.field {
+  display: grid;
+  gap: 8px;
+}
+
+label {
+  padding-left: 14px;
+  font-size: 12px;
+}
+
+.input-container {
+  display: grid;
+  grid-template-columns: 18px minmax(0, 1fr);
+  align-items: center;
+  gap: 10px;
+  padding: 0 16px;
+  background-color: white;
+  border: 1px solid transparent;
+  border-radius: 12px;
+}
+
+.input-container:focus-within {
+  border-color: #075bdb;
+}
+
+.input-container svg {
+  width: 16px;
+  height: 16px;
+  fill: none;
+  stroke: #777b8c;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+input {
+  width: 100%;
+  min-width: 0;
+  padding: 15px 0;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: #34364f;
+  font: inherit;
+  font-size: 14px;
+}
+
+input::placeholder {
+  color: #9194a0;
+}
+
+a {
+  color: #0755ae;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.forgot-password {
+  justify-self: end;
+  font-size: 12px;
+}
+
+button {
+  width: 172px;
+  min-height: 48px;
+  margin-top: 30px;
+  border: none;
+  border-radius: 12px;
+  background-color: #075bdb;
+  color: white;
+  font: inherit;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #034cbd;
+}
+
+button:focus-visible,
+a:focus-visible {
+  outline: 3px solid #739ff1;
+  outline-offset: 4px;
+}
+
+.signup {
+  display: none;
+  margin-top: 44px;
+  color: #777b8c;
+  text-align: center;
+  font-size: 12px;
+}
+
+.signup a {
+  font-weight: bold;
+}
+
+.demo {
+  display: none;
+  color: #777b8c;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.demo:target {
+  display: block;
+}
+
+/* Tabletas */
+@media (max-width: 1024px) {
+  .login {
+    grid-template-columns: 45% 55%;
+  }
+
+  .brand {
+    padding: 20px;
+  }
+
+  .brand p {
+    font-size: 30px;
+  }
+
+  .login-panel {
+    padding: 40px 28px;
+  }
+}
+
+/* Móviles */
+@media (max-width: 600px) {
+  .login {
+    grid-template-columns: 1fr;
+  }
+
+  .brand {
+    display: none;
+  }
+
+  .login-panel {
+    align-items: start;
+    padding: 100px 24px 40px;
+  }
+
+  .description {
+    margin-bottom: 28px;
+  }
+
+  .login-form {
+    gap: 22px;
+  }
+
+  /* Las etiquetas siguen disponibles para lectores de pantalla. */
+  label {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+  }
+
+  .input-container {
+    border-radius: 5px;
+  }
+
+  input {
+    font-size: 16px;
+  }
+
+  .forgot-password {
+    margin-top: -6px;
+  }
+
+  button {
+    width: 100%;
+    margin-top: 20px;
+    border-radius: 6px;
+  }
+
+  .signup {
+    display: block;
+  }
+}
+
+/* Pantallas horizontales de poca altura */
+@media (max-height: 500px) {
+  .login-panel {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+
+  .description {
+    margin-bottom: 24px;
+  }
+}
